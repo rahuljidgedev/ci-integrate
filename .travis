@@ -28,3 +28,4 @@ script:
   - android list target
   - ./gradlew connectedAndroidTest
  
+ 
