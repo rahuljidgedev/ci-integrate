@@ -14,6 +14,17 @@ android:
     - addon-google_apis-google-21
 	- sys-img-x86-android-26
 
+env:
+ global:
+   # install timeout in minutes (2 minutes by default)
+    - ADB_INSTALL_TIMEOUT=8
+
+	
 before_install:
  - chmod +x gradlew
+ 
+
+script:
+  - android list target
+  - ./gradlew connectedAndroidTest
  
